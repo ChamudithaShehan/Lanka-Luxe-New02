@@ -77,7 +77,7 @@ export default function Navbar() {
                     isActive ? "text-[#38BDF8]" : "text-[#081A33] hover:text-[#38BDF8]"
                   }`}
                 >
-                  <span className="flex items-center gap-1.5">
+                  <span className="flex items-center gap-1.5 whitespace-nowrap">
                     {link.label}
                   </span>
                   {/* Underline Indicator */}

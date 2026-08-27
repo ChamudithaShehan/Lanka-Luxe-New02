@@ -1,5 +1,7 @@
 # Lanka Luxe Journeys
 
+**Live Site:** [Lanka Luxe Journeys | Discover Sri Lanka in Extraordinary Style](https://lanka-luxe-new02.vercel.app/)
+
 A premium luxury travel agency platform focused on bespoke journeys and exclusive golf holidays in Sri Lanka. Built with modern web technologies, this project offers a highly polished, performant, and deeply interactive user experience featuring smooth animations, luxury typography, and seamless bilingual support.
 
 ## 🌟 Features
