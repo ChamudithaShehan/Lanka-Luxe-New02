@@ -14,12 +14,12 @@ export default function LuxuryExperiences() {
   const isKorean = language === "ko";
 
   return (
-    <section className="relative bg-section-white text-[#081A33] py-24 lg:py-36 overflow-hidden font-sans">
+    <section className="relative bg-section-white text-[#081A33] py-16 sm:py-24 lg:py-36 overflow-hidden font-sans">
       {/* Top gold hairline */}
       <div className="gold-divider absolute top-0 left-0 right-0" />
 
-      {/* Subtle cream wash on right */}
-      <div className="absolute top-0 right-0 w-[500px] h-full bg-gradient-to-l from-[#F6F3EE] to-transparent pointer-events-none" />
+      {/* Subtle cream wash on right (hidden on mobile) */}
+      <div className="hidden lg:block absolute top-0 right-0 w-[500px] h-full bg-gradient-to-l from-[#F6F3EE] to-transparent pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 

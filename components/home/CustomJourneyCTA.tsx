@@ -13,7 +13,7 @@ export default function CustomJourneyCTA() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <section className="relative py-28 lg:py-36 overflow-hidden font-sans">
+    <section className="relative py-16 sm:py-28 lg:py-36 overflow-hidden font-sans">
       {/* Background Cinematic Image */}
       <div className="absolute inset-0 bg-[#081A33]">
         <Image

@@ -27,7 +27,7 @@ export default function TestimonialsSlider() {
   const tourText  = review.tourTaken[language] || review.tourTaken.en;
 
   return (
-    <section className="relative bg-section-white text-[#081A33] py-24 lg:py-36 overflow-hidden font-sans">
+    <section className="relative bg-section-white text-[#081A33] py-16 sm:py-24 lg:py-36 overflow-hidden font-sans">
       {/* Top hairline */}
       <div className="gold-divider absolute top-0 left-0 right-0" />
 
@@ -51,7 +51,7 @@ export default function TestimonialsSlider() {
         {/* Review Card */}
         <div className="white-card p-8 sm:p-12 shadow-md relative overflow-hidden">
           {/* Decorative giant quote mark */}
-          <div className="absolute top-6 right-8 text-[120px] font-serif-luxury text-[#F0EBE3] leading-none select-none pointer-events-none">
+          <div className="absolute top-6 right-8 text-[80px] sm:text-[120px] font-serif-luxury text-[#F0EBE3] leading-none select-none pointer-events-none">
             &ldquo;
           </div>
 

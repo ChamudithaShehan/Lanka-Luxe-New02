@@ -10,7 +10,7 @@ export default function WhyChooseUs() {
   const icons = [Compass, Sparkles, Flag, Hotel, Car, ShieldCheck];
 
   return (
-    <section className="relative bg-section-snow text-[#081A33] py-24 lg:py-36 overflow-hidden font-sans">
+    <section className="relative bg-section-snow text-[#081A33] py-16 sm:py-24 lg:py-36 overflow-hidden font-sans">
       {/* Very subtle grid dot pattern */}
       <div
         className="absolute inset-0 pointer-events-none opacity-40"

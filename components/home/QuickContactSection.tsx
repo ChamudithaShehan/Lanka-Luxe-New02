@@ -28,7 +28,7 @@ export default function QuickContactSection() {
   const inputCls = "w-full bg-[#F8FAFC] border border-[#E8E2D9] rounded-xl px-4 py-2.5 text-xs text-[#081A33] placeholder-[#A7B0BE] focus:outline-none focus:border-[#C9A86A] focus:ring-1 focus:ring-[#C9A86A]/30 transition-all";
 
   return (
-    <section className="relative bg-section-snow text-[#081A33] py-24 lg:py-36 overflow-hidden font-sans">
+    <section className="relative bg-section-snow text-[#081A33] py-16 sm:py-24 lg:py-36 overflow-hidden font-sans">
       {/* Top hairline */}
       <div className="gold-divider absolute top-0 left-0 right-0" />
 

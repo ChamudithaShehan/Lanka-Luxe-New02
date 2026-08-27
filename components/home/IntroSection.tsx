@@ -13,14 +13,14 @@ export default function IntroSection() {
   return (
     <section
       id="intro-section"
-      className="relative bg-section-white text-[#081A33] py-24 lg:py-36 overflow-hidden font-sans"
+      className="relative bg-section-white text-[#081A33] py-16 sm:py-24 lg:py-36 overflow-hidden font-sans"
     >
       {/* Top gold hairline */}
       <div className="gold-divider absolute top-0 left-0 right-0" />
 
-      {/* Subtle cream radial at top-right */}
-      <div className="absolute top-0 right-0 w-[500px] h-[440px] bg-gradient-to-bl from-[#C9A86A]/10 to-transparent pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-[400px] h-[350px] bg-gradient-to-tr from-[#F6F3EE] to-transparent pointer-events-none" />
+      {/* Subtle cream radial at top-right (hidden on mobile to prevent overflow) */}
+      <div className="hidden lg:block absolute top-0 right-0 w-[500px] h-[440px] bg-gradient-to-bl from-[#C9A86A]/10 to-transparent pointer-events-none" />
+      <div className="hidden lg:block absolute bottom-0 left-0 w-[400px] h-[350px] bg-gradient-to-tr from-[#F6F3EE] to-transparent pointer-events-none" />
 
       {/* Gold emblem ornament (centred on hairline) */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center gap-3 z-10">

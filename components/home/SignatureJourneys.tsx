@@ -30,7 +30,7 @@ export default function SignatureJourneys() {
       : toursData.filter((t) => t.category === activeCategory);
 
   return (
-    <section className="relative bg-section-white text-[#081A33] py-24 lg:py-36 overflow-hidden font-sans">
+    <section className="relative bg-section-white text-[#081A33] py-16 sm:py-24 lg:py-36 overflow-hidden font-sans">
       {/* Top hairline */}
       <div className="gold-divider absolute top-0 left-0 right-0" />
 
