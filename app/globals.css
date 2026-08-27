@@ -1,26 +1,289 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --navy-deep: #081a33;
+  --navy-secondary: #102a4c;
+  --navy-card: #0c2240;
+  --navy-light: #183861;
+  --gold-primary: #c9a86a;
+  --gold-light: #e5c98b;
+  --gold-dark: #a08047;
+  --cream-soft: #f6f3ee;
+  --cream-pure: #fcfbf9;
+  --white: #ffffff;
+  --gray-muted: #a7b0be;
+  --gray-dark: #4a5568;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@theme {
+  --color-navy-deep: #081a33;
+  --color-navy-secondary: #102a4c;
+  --color-navy-card: #0c2240;
+  --color-navy-light: #183861;
+  --color-gold-primary: #c9a86a;
+  --color-gold-light: #e5c98b;
+  --color-gold-dark: #a08047;
+  --color-cream-soft: #f6f3ee;
+  --color-cream-pure: #fcfbf9;
+  --color-gray-muted: #a7b0be;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark light;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ffffff;
+  color: #081A33;
+  font-family: var(--font-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: #c9a86a;
+  color: #081a33;
+}
+
+/* Custom Luxury Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F8FAFC;
+}
+::-webkit-scrollbar-thumb {
+  background: #C9A86A;
+  border-radius: 4px;
+  border: 1px solid rgba(201, 168, 106, 0.3);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a08047;
+}
+
+/* Typography Utility Classes */
+.font-serif-luxury {
+  font-family: var(--font-serif), "Playfair Display", Georgia, serif;
+}
+
+.font-sans-luxury {
+  font-family: var(--font-sans), "Plus Jakarta Sans", -apple-system, sans-serif;
+}
+
+/* Luxury Gold Gradients & Text */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #e5c98b 0%, #c9a86a 50%, #9e7f44 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gold-glow {
+  text-shadow: 0 0 20px rgba(201, 168, 106, 0.4);
+}
+
+.bg-gold-gradient {
+  background: linear-gradient(135deg, #e5c98b 0%, #c9a86a 50%, #a88448 100%);
+}
+
+.bg-gold-subtle {
+  background: linear-gradient(180deg, rgba(201, 168, 106, 0.12) 0%, rgba(201, 168, 106, 0.02) 100%);
+}
+
+.border-gold-subtle {
+  border-color: rgba(201, 168, 106, 0.25);
+}
+
+.border-gold-glow {
+  box-shadow: 0 0 15px rgba(201, 168, 106, 0.2);
+}
+
+/* Glassmorphic Luxury Cards */
+.glass-luxury {
+  background: rgba(16, 42, 76, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(201, 168, 106, 0.2);
+}
+
+.glass-luxury-dark {
+  background: rgba(8, 26, 51, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(201, 168, 106, 0.2);
+}
+
+.glass-luxury-card {
+  background: linear-gradient(145deg, rgba(16, 42, 76, 0.7) 0%, rgba(8, 26, 51, 0.9) 100%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(201, 168, 106, 0.18);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-luxury-card:hover {
+  border-color: rgba(201, 168, 106, 0.55);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.6), 0 0 25px rgba(201, 168, 106, 0.15);
+  transform: translateY(-4px);
+}
+
+/* ======================================================
+   WHITE / LIGHT SECTION DESIGN SYSTEM
+   Used for all sections BELOW the dark navy hero.
+   ====================================================== */
+
+/* White card — crisp shadow, gold accent border on hover */
+.white-card {
+  background: #ffffff;
+  border: 1px solid #e8e2d9;
+  border-radius: 1.25rem;
+  transition: box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.3s ease,
+              transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.white-card:hover {
+  box-shadow: 0 20px 48px -12px rgba(8, 26, 51, 0.14),
+              0 0 0 1.5px rgba(201, 168, 106, 0.45);
+  border-color: rgba(201, 168, 106, 0.5);
+  transform: translateY(-4px);
+}
+
+/* Light section backgrounds */
+.bg-section-white { background-color: #ffffff; }
+.bg-section-snow  { background-color: #F8FAFC; }
+.bg-section-cream { background-color: #F6F3EE; }
+
+/* White section gold divider hairline  */
+.gold-divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(201,168,106,0.6), transparent);
+}
+
+/* Soft drop shadow for image cards on white */
+.img-shadow-soft {
+  box-shadow: 0 8px 32px -8px rgba(8, 26, 51, 0.18),
+              0 2px 8px rgba(0,0,0,0.06);
+}
+
+/* Light gold tag pill for white backgrounds */
+.tag-gold-light {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.85rem;
+  border-radius: 9999px;
+  background: rgba(201, 168, 106, 0.12);
+  border: 1px solid rgba(201, 168, 106, 0.4);
+  color: #a08047;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+/* Section label rule on white */
+.section-label-light {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: #a08047;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+.section-label-light::before,
+.section-label-light::after {
+  content: '';
+  display: block;
+  width: 2rem;
+  height: 1px;
+  background: #c9a86a;
+}
+
+/* Subtle Floating Animations */
+@keyframes subtle-float-1 {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(0.5deg);
+  }
+}
+
+@keyframes subtle-float-2 {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(-0.5deg);
+  }
+}
+
+@keyframes subtle-float-3 {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes gold-shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.animate-float-1 {
+  animation: subtle-float-1 6s ease-in-out infinite;
+}
+
+.animate-float-2 {
+  animation: subtle-float-2 8s ease-in-out infinite;
+}
+
+.animate-float-3 {
+  animation: subtle-float-3 7s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  background-size: 200% auto;
+  animation: gold-shimmer 4s linear infinite;
+}
+
+/* Sri Lanka Map Pattern Background */
+.bg-map-pattern {
+  background-image: radial-gradient(rgba(201, 168, 106, 0.1) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* Button Shimmer Overlay */
+.btn-gold-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-gold-shimmer::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 40%;
+  height: 200%;
+  background: linear-gradient(
+    60deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.35) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(25deg);
+  transition: all 0.75s ease;
+}
+
+.btn-gold-shimmer:hover::after {
+  left: 130%;
 }
