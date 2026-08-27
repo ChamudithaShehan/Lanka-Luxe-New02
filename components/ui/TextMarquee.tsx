@@ -26,21 +26,21 @@ export default function TextMarquee({
         }}
       >
         <div className="flex whitespace-nowrap">
-        {/* We use two instances of the text for a seamless loop */}
-        <motion.div
-          animate={{ x: ["0%", "-50%"] }}
-          transition={{
-            repeat: Infinity,
-            ease: "linear",
-            duration: speed,
-          }}
-          className="flex whitespace-nowrap text-5xl sm:text-6xl md:text-7xl font-sans font-bold uppercase tracking-widest text-[#081A33]/5 select-none will-change-transform transform-gpu"
-        >
-          <span className="mr-8">{text}</span>
-          <span className="mr-8">{text}</span>
-          <span className="mr-8">{text}</span>
-          <span className="mr-8">{text}</span>
-        </motion.div>
+          {/* We use two instances of the text for a seamless loop */}
+          <motion.div
+            animate={{ x: ["0%", "-50%"] }}
+            transition={{
+              repeat: Infinity,
+              ease: "linear",
+              duration: speed,
+            }}
+            className="flex whitespace-nowrap text-5xl sm:text-6xl md:text-7xl font-sans font-bold uppercase tracking-widest text-[#081A33]/5 select-none will-change-transform transform-gpu"
+          >
+            <span className="mr-8">{text}</span>
+            <span className="mr-8">{text}</span>
+            <span className="mr-8">{text}</span>
+            <span className="mr-8">{text}</span>
+          </motion.div>
         </div>
       </div>
     </div>
